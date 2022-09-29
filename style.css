@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #FBFFFE;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 85%;
+  margin: auto;
+  height: 12vh;
+  padding-top: 0.5rem;
+}
+
+.navbar-logo a img {
+  width: 160px;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-left: 3rem;
+}
+
+.navbar-icons_links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.navbar-icons_links li {
+  margin: 0.4rem;
+}
+
+.navbar-icons_links .services-link {
+  position: relative;
+  transition: 0.2s all ease;
+}
+
+.navbar-icons_links .services-link .navbar-services {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  flex-direction: column;
+  width: max-content;
+  top: 170%;
+  left: -70%;
+  background-color: white;
+  padding: 1rem 0;
+  border-radius: 10px;
+  transition: 0.2s all ease;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.navbar-icons_links .services-link .navbar-services a,
+.navbar-icons_links .services-link .navbar-services a img,
+.navbar-icons_links .services-link .navbar-services a p,
+.navbar-icons_links .services-link .navbar-services a span {
+  background-color: white;
+  transition: 0.2s all ease !important;
+}
+
+.navbar-icons_links .services-link .navbar-services a:hover,
+.navbar-icons_links .services-link .navbar-services a img:hover,
+.navbar-icons_links .services-link .navbar-services a p:hover,
+.navbar-icons_links .services-link .navbar-services a span:hover {
+  background-color: rgb(41, 187, 41);
+}
+
+.navbar-icons_links .services-link .navbar-services a {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.navbar-icons_links .services-link .navbar-services a img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.navbar-icons_links .services-link .navbar-services a p {
+  margin-left: 1rem;
+  width: 100%;
+  background-color: white;
+}
+
+.navbar-icons_links .services-link .navbar-services a:hover,
+.navbar-icons_links .services-link .navbar-services a:hover p,
+.navbar-icons_links .services-link .navbar-services a:hover img,
+.navbar-icons_links .services-link .navbar-services a:hover span {
+  border-color: transparent !important;
+  background-color: rgb(243, 243, 243);
+}
+
+.navbar-icons_links .services-link .navbar-services .web-utility {
+  position: relative;
+}
+
+.navbar-icons_links .services-link .navbar-services .web-utility .utilities {
+  background-color: white;
+  position: absolute;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  right: -98%;
+  top: -10%;
+  padding: 0.5rem 0;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: 0.2s all linear;
+}
+
+.navbar-icons_links li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #001514;
+  font-weight: 500;
+  padding: 0.3rem 1.1rem;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  transition: 0.2s all linear;
+}
+
+.navbar-icons_links li a:hover {
+  border-color: #001514;
+}
+
+.navbar-icons .user-buttons {
+  margin-left: auto;
+}
+
+.navbar-icons .user-buttons a {
+  padding: 0.6rem 1.5rem;
+  background-color: #05b177;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+  border: 2px solid #05b177;
+  font-weight: 500;
+  text-decoration: none;
+  color: #FBFFFE;
+  transition: 0.2s all ease;
+}
+
+.navbar-icons .user-buttons a:hover {
+  background-color: #FBFFFE;
+  color: #001514;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.navbar .hamburger {
+  position: absolute;
+  right: 10%;
+  width: 50px;
+  height: 15px;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  border-radius: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.navbar .hamburger:active {
+  background: transparent;
+}
+
+.navbar .hamburger:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 2px;
+  background: black;
+  transition: 0.5s;
+}
+
+.navbar .hamburger:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background: black;
+  transition: 0.5s;
+}
+
+@media (max-width: 1050px) {
+  .navbar {
+    width: 95%;
+  }
+  .navbar-icons {
+    margin-left: 0;
+  }
+}
+@media (max-width: 885px) {
+  .navbar {
+    width: 100%;
+    z-index: 1;
+  }
+  .navbar-logo {
+    margin: 1rem 0 0 1rem;
+  }
+  .navbar .hamburger {
+    display: block;
+  }
+  .navbar .navbar-services {
+    display: none !important;
+  }
+  .navbar-icons {
+    flex-direction: column;
+    position: fixed;
+    width: 100vw;
+    transition: 0.3s all linear;
+    z-index: 11;
+    top: 12vh;
+    padding-bottom: 1rem;
+    border-radius: 20px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .navbar-icons_links {
+    width: 100%;
+  }
+  .navbar-icons_links li {
+    padding: 1rem;
+    width: 80%;
+    text-align: center;
+    border-bottom: 1px solid black;
+  }
+  .navbar-icons_links li a {
+    width: 100%;
+  }
+  .navbar-icons_links li:hover a {
+    border-color: transparent;
+    color: rgb(99, 98, 98);
+  }
+  .navbar-icons .user-buttons {
+    margin-top: 2rem !important;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .navbar-icons .user-buttons a {
+    margin: 0;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+  }
+  .navbar-icons_links {
+    flex-direction: column;
+  }
+}
+.showme {
+  pointer-events: all !important;
+  opacity: 1 !important;
+}
+
+.hamburger-close:before {
+  transform: rotate(225deg) !important;
+}
+
+.hamburger-close:after {
+  transform: rotate(135deg) !important;
+  bottom: none !important;
+  top: 0 !important;
+}
+
+.hero {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 85%;
+  margin: 50px auto 0;
+}
+
+.hero-texts h1 {
+  font-size: 3rem;
+  display: block;
+}
+.hero-texts h1 span {
+  color: #05b177;
+}
+.hero-texts p {
+  color: #001514;
+  font-size: 18px;
+  font-weight: 500;
+  width: 70%;
+  line-height: 2rem;
+  margin-top: 1rem;
+}
+.hero-texts_btns {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.hero-texts_btns button {
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 45%;
+  padding: 0.8rem 0;
+  border-radius: 30px;
+  transition: 0.1s all linear;
+}
+.hero-texts_btns button:hover {
+  transform: translateY(-4px);
+}
+.hero-texts_btns-vs {
+  background-color: #05b177;
+  color: #FBFFFE;
+  border: 2px solid #05b177 !important;
+}
+.hero-texts_btns-vs:hover {
+  background-color: #FBFFFE;
+  color: #001514;
+  border: 2px solid #05b177;
+}
+.hero-texts_btns-hu {
+  background-color: #FBFFFE;
+  color: #001514;
+  border: 2px solid #001514 !important;
+}
+.hero-texts_btns-hu:hover {
+  background-color: #001514;
+  color: #FBFFFE;
+  border: 2px solid #00e1ff;
+}
+
+.hero-img {
+  width: 50%;
+  height: 100%;
+  min-width: 300px;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border-radius: 18px;
+  transition: 0.2s transform linear;
+}
+.hero-img img:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 1050px) {
+  .hero {
+    width: 95%;
+  }
+  .hero-texts h1 {
+    font-size: 2.3rem;
+  }
+  .hero-texts_btns {
+    width: 80%;
+  }
+}
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column-reverse;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  .hero-texts {
+    width: 95%;
+  }
+  .hero-texts p {
+    width: 90%;
+  }
+  .hero-texts_btns {
+    width: 100%;
+  }
+  .hero-img {
+    margin: 2rem 0;
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
