@@ -18,11 +18,14 @@
   height: 12vh;
   padding-top: 0.5rem;
 }
-
-.navbar-logo a img {
-  width: 160px;
+.navbar-logo {
+  margin: auto 0;
+  cursor: pointer;
 }
-
+.navbar-logo img {
+  width: 160px;
+  margin: auto 0;
+}
 .navbar-icons {
   display: flex;
   align-items: center;
@@ -30,23 +33,32 @@
   width: 100%;
   margin-left: 3rem;
 }
-
 .navbar-icons_links {
   display: flex;
   align-items: center;
   justify-content: space-around;
   list-style: none;
 }
-
 .navbar-icons_links li {
   margin: 0.4rem;
 }
-
+.navbar-icons_links li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #001514;
+  font-weight: 500;
+  padding: 0.3rem 1.1rem;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  transition: 0.2s all linear;
+}
+.navbar-icons_links li a:hover {
+  border-color: #001514;
+}
 .navbar-icons_links .services-link {
   position: relative;
   transition: 0.2s all ease;
 }
-
 .navbar-icons_links .services-link .navbar-services {
   position: absolute;
   display: flex;
@@ -62,7 +74,6 @@
   transition: 0.2s all ease;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
-
 .navbar-icons_links .services-link .navbar-services a,
 .navbar-icons_links .services-link .navbar-services a img,
 .navbar-icons_links .services-link .navbar-services a p,
@@ -70,14 +81,6 @@
   background-color: white;
   transition: 0.2s all ease !important;
 }
-
-.navbar-icons_links .services-link .navbar-services a:hover,
-.navbar-icons_links .services-link .navbar-services a img:hover,
-.navbar-icons_links .services-link .navbar-services a p:hover,
-.navbar-icons_links .services-link .navbar-services a span:hover {
-  background-color: rgb(41, 187, 41);
-}
-
 .navbar-icons_links .services-link .navbar-services a {
   display: flex;
   align-items: center;
@@ -86,30 +89,27 @@
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
 }
-
 .navbar-icons_links .services-link .navbar-services a img {
   width: 50px;
   border-radius: 50%;
 }
-
 .navbar-icons_links .services-link .navbar-services a p {
   margin-left: 1rem;
   width: 100%;
   background-color: white;
 }
-
-.navbar-icons_links .services-link .navbar-services a:hover,
-.navbar-icons_links .services-link .navbar-services a:hover p,
-.navbar-icons_links .services-link .navbar-services a:hover img,
-.navbar-icons_links .services-link .navbar-services a:hover span {
+.navbar-icons_links .services-link .navbar-services a:hover {
   border-color: transparent !important;
   background-color: rgb(243, 243, 243);
 }
-
+.navbar-icons_links .services-link .navbar-services a:hover p,
+.navbar-icons_links .services-link .navbar-services a:hover img,
+.navbar-icons_links .services-link .navbar-services a:hover span {
+  background-color: rgb(243, 243, 243);
+}
 .navbar-icons_links .services-link .navbar-services .web-utility {
   position: relative;
 }
-
 .navbar-icons_links .services-link .navbar-services .web-utility .utilities {
   background-color: white;
   position: absolute;
@@ -123,26 +123,9 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   transition: 0.2s all linear;
 }
-
-.navbar-icons_links li a {
-  text-decoration: none;
-  font-size: 16px;
-  color: #001514;
-  font-weight: 500;
-  padding: 0.3rem 1.1rem;
-  border-radius: 5px;
-  border: 3px solid transparent;
-  transition: 0.2s all linear;
-}
-
-.navbar-icons_links li a:hover {
-  border-color: #001514;
-}
-
 .navbar-icons .user-buttons {
   margin-left: auto;
 }
-
 .navbar-icons .user-buttons a {
   padding: 0.6rem 1.5rem;
   background-color: #05b177;
@@ -154,13 +137,11 @@
   color: #FBFFFE;
   transition: 0.2s all ease;
 }
-
 .navbar-icons .user-buttons a:hover {
   background-color: #FBFFFE;
   color: #001514;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
 .navbar .hamburger {
   position: absolute;
   right: 10%;
@@ -172,11 +153,9 @@
   border-radius: 5px;
   display: none;
 }
-
 .navbar .hamburger:active {
   background: transparent;
 }
-
 .navbar .hamburger:before {
   content: "";
   position: absolute;
@@ -186,7 +165,6 @@
   background: black;
   transition: 0.5s;
 }
-
 .navbar .hamburger:after {
   content: "";
   position: absolute;
@@ -213,12 +191,6 @@
   .navbar-logo {
     margin: 1rem 0 0 1rem;
   }
-  .navbar .hamburger {
-    display: block;
-  }
-  .navbar .navbar-services {
-    display: none !important;
-  }
   .navbar-icons {
     flex-direction: column;
     position: fixed;
@@ -233,6 +205,7 @@
   }
   .navbar-icons_links {
     width: 100%;
+    flex-direction: column;
   }
   .navbar-icons_links li {
     padding: 1rem;
@@ -261,8 +234,11 @@
     width: 40%;
     margin: auto;
   }
-  .navbar-icons_links {
-    flex-direction: column;
+  .navbar .hamburger {
+    display: block;
+  }
+  .navbar-services {
+    display: none !important;
   }
 }
 .showme {
@@ -288,7 +264,6 @@
   width: 85%;
   margin: 50px auto 0;
 }
-
 .hero-texts h1 {
   font-size: 3rem;
   display: block;
@@ -345,13 +320,11 @@
   color: #FBFFFE;
   border: 2px solid #00e1ff;
 }
-
 .hero-img {
   width: 50%;
   height: 100%;
   min-width: 300px;
 }
-
 .hero-img img {
   width: 100%;
   height: 100%;
