@@ -16,10 +16,10 @@
     margin: auto;
     height: 12vh;
     padding-top: 0.5rem;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    // position: fixed;
+    // top: 0;
+    // left: 50%;
+    // transform: translateX(-50%);
     z-index: 999;
 
     &-logo {
@@ -300,8 +300,8 @@
 .hero {
     box-sizing: border-box;
     @include flex(space-around);
-    width: 85%;
-    margin: 10rem auto 15rem;
+    width: 90%;
+    margin: 6rem auto 10rem;
 
     &-texts {
 
@@ -442,10 +442,59 @@
     }
 }
 
+//hero ends
+
+//services
+.services {
+    &-texts {
+        text-align: center;
+
+        h3 {
+            color: $additional-color;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin: 0rem 0 1rem;
+            line-height: 3.5rem;
+
+            span {
+                color: $btn-color;
+            }
+        }
+    }
+
+    &-intros {
+        @include flex(space-between);
+        width: 80%;
+        margin: auto;
+
+        &_card {
+            flex-basis: 30%;
+            text-align: center;
+
+            .icon {
+                width: 120px;
+                margin: auto;
+
+                img {
+                    width: 100%;
+                    // border-radius: 100px;
+                }
+            }
+        }
+    }
+}
+
+//sercises end
+
 //about us section
 
 .aboutus {
-    width: 90%;
+    width: 95%;
     margin: 5rem auto;
     position: relative;
 
@@ -472,6 +521,7 @@
 
 
         &-texts {
+            padding-top: 6rem;
             width: 50%;
 
             h3 {
@@ -484,7 +534,7 @@
                 font-size: 2.4rem;
                 font-weight: 600;
                 margin: 0rem 0 1rem;
-                line-height: 4rem;
+                line-height: 3.5rem;
 
                 span {
                     color: $btn-color;
@@ -498,7 +548,7 @@
 
             ul {
                 margin-top: .5rem;
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
 
                 li {
                     @include flex(flex-start);
@@ -543,7 +593,7 @@
 
         .img-design {
             position: absolute;
-            bottom: 50px;
+            bottom: 80px;
             left: -50px;
             width: 650px;
             height: 400px;
@@ -551,6 +601,68 @@
             z-index: 1;
             border-radius: 10px;
 
+        }
+    }
+}
+
+@media(max-width:1100px) {
+    .aboutus {
+        &-intro {
+            &-img {
+                margin-right: 2rem;
+
+                img {
+                    width: 500px;
+                }
+            }
+
+            &-texts {
+                h1 {
+                    font-size: 2rem;
+                }
+            }
+
+            .img-design {
+                bottom: 120px;
+                left: -20px;
+                width: 450px;
+                height: 350px;
+            }
+        }
+    }
+}
+
+@include xl {
+    .aboutus {
+        &-intro {
+            flex-direction: column;
+
+            &-img {
+                // margin-right: 0;
+                margin: auto;
+                width: 100%;
+                padding-bottom: 4rem;
+
+                img {
+                    width: 90%;
+                    margin-left: 5%;
+
+                }
+            }
+
+            &-texts {
+                padding-top: 0%;
+                z-index: 44;
+                width: 90%;
+
+                h1 {
+                    font-size: 2.4rem;
+                }
+            }
+
+            .img-design {
+                display: none;
+            }
         }
     }
 }

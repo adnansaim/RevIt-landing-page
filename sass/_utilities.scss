@@ -22,7 +22,7 @@ $font-family: 'Poppins', sans-serif;
 ;
 
 @mixin xl {
-    @media(max-width:885px) {
+    @media(max-width:900px) {
         @content
     }
 }
