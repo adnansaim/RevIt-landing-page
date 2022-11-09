@@ -301,7 +301,7 @@
     box-sizing: border-box;
     @include flex(space-around);
     width: 90%;
-    margin: 6rem auto 10rem;
+    margin: 4rem auto 10rem;
 
     &-texts {
 
@@ -349,7 +349,7 @@
             &-vs {
                 background-color: $additional-color;
                 color: $background-color;
-                border: 2px solid $additional-color  !important;
+                border: 2px solid $additional-color !important;
 
                 &:hover {
                     background-color: $background-color;
@@ -361,7 +361,7 @@
             &-hu {
                 background-color: $background-color;
                 color: $text-color;
-                border: 2px solid $text-color  !important;
+                border: 2px solid $text-color !important;
 
                 &:hover {
                     background-color: $text-color;
@@ -460,6 +460,7 @@
             font-weight: 600;
             margin: 0rem 0 1rem;
             line-height: 3.5rem;
+            margin: 1rem 0 3rem;
 
             span {
                 color: $btn-color;
@@ -469,12 +470,19 @@
 
     &-intros {
         @include flex(space-between);
-        width: 80%;
+        width: 85%;
         margin: auto;
+        flex-wrap: wrap;
 
         &_card {
             flex-basis: 30%;
+            min-width: 280px;
             text-align: center;
+            min-height: 400px;
+            transition: .25s box-shadow linear;
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, .05);
 
             .icon {
                 width: 120px;
@@ -482,9 +490,100 @@
 
                 img {
                     width: 100%;
-                    // border-radius: 100px;
+
                 }
             }
+
+            .texts {
+                margin-top: 1.5rem;
+
+                h2 {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    transition: .25s color ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #13c78b;
+                    }
+                }
+
+                p {
+                    color: gray;
+                    margin-top: .5rem;
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+
+                button {
+                    margin-top: 1.2rem;
+                    border: none;
+                    outline: none;
+                    background-color: inherit;
+                    font-size: .9rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    color: $additional-color;
+                    transition: .2s all ease;
+
+                    span {
+                        font-size: 2rem;
+
+                    }
+
+                    &:hover {
+                        letter-spacing: .5px;
+                    }
+                }
+            }
+
+            &:hover {
+                box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+            }
+        }
+    }
+}
+
+@include xxl {
+    .services-intros {
+        width: 95%;
+    }
+}
+
+@include xl {
+    .services {
+        margin-top: 10rem;
+
+        &-texts {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        &-intros {
+            justify-content: space-around;
+
+            &_card {
+                flex-basis: 45%;
+                margin-bottom: 2rem;
+                min-width: 310px;
+            }
+        }
+    }
+}
+
+@include sm {
+    .services {
+
+
+        &-texts {
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        &-intros_card {
+            flex-basis: 80%;
         }
     }
 }
@@ -495,7 +594,7 @@
 
 .aboutus {
     width: 95%;
-    margin: 5rem auto;
+    margin: 6rem auto;
     position: relative;
 
 
