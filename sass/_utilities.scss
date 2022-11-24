@@ -43,6 +43,8 @@ $font-family: 'Poppins', sans-serif;
     }
 }
 
+;
+
 @mixin xsm {
     @media(max-width:500px) {
         @content
