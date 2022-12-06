@@ -408,17 +408,19 @@
   padding: 2rem;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: white;
+  background-color: #FBFFFE;
 }
 .services-intros_card .icon {
   width: 100px;
   margin: auto;
+  background-color: #FBFFFE;
 }
 .services-intros_card .icon img {
   width: 100%;
 }
 .services-intros_card .texts {
   margin-top: 1.5rem;
+  background-color: #FBFFFE;
 }
 .services-intros_card .texts h2 {
   font-size: 1.5rem;
